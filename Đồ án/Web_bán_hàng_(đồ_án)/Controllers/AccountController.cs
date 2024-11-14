@@ -11,7 +11,7 @@ namespace Web_bán_hàng__đồ_án_.Controllers
     {
 
         // GET: LoginRegister
-       LTWEntities acc = new LTWEntities();
+        LTWEntities1 acc = new LTWEntities1();
         [HttpGet]
         public ActionResult Register()
         {
