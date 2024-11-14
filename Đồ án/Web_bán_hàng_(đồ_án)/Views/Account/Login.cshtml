@@ -18,27 +18,32 @@
         <div id="Login">
             <h1>Đăng nhập</h1>
             <div>
-                <form id="form">
-                    <div class="Trangchinh">
-                        <i class="fas fa-user"></i>
-                        <label for="name" class="description">Tên đăng nhập</label><br />
-                        <input type="text" name="Nhập tên đăng nhập" placeholder="Nhập tên tài khoản" class="input-box" /><br />
-                    </div>
-                    <div class="Trangchinh">
-                        <i class="fas fa-lock"></i>
-                        <label for="password" class="description">Password</label><br />
-                        <input type="password" name="Mật khẩu" placeholder="Nhập mật khẩu" class="input-box" /><br />
-                    </div>
-                    <div id="remember">
-                        <label><input type="checkbox" />Nhớ mật khẩu</label>
-                        <a href="#">Quên mật khẩu?</a>
-                    </div>
-                    <button type="submit" class="btn-login1">Đăng nhập</button>
-                    <div class="input">
-                        <label for="register">Bạn chưa có tài khoản?</label>
-                        <a style="color:red" ; href="~/Giohang/register">Đăng kí</a>
-                    </div>
-                </form>
+                @using (Html.BeginForm("Login", "Account", FormMethod.Post)) {
+            <form id="form">
+                <div class="Trangchinh">
+                    <i class="fas fa-user"></i>
+                    <label for="name" class="description">@Html.LabelFor(m => m.UserName)</label><br />
+                    @Html.TextBoxFor(m => m.UserName, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(m => m.UserName)
+
+                </div>
+                <div class="Trangchinh">
+                    <i class="fas fa-lock"></i>
+                    <label for="password" class="description"> @Html.LabelFor(m => m.Password)</label><br />
+                    @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(m => m.Password)
+                </div>
+                <div id="remember">
+                    <label><input type="checkbox" />Nhớ mật khẩu</label>
+                    <a href="#">Quên mật khẩu?</a>
+                </div>
+                <button type="submit" class="btn-login1">Đăng nhập</button>
+                <div class="input">
+                    <label for="register">Bạn chưa có tài khoản?</label>
+                    <a style="color:red" ; href="~/Giohang/register">Đăng kí</a>
+                </div>
+            </form>
+                }
             </div>
         </div>
     </div>

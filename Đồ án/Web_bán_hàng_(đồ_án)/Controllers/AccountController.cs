@@ -11,7 +11,7 @@ namespace Web_bán_hàng__đồ_án_.Controllers
     {
 
         // GET: LoginRegister
-        LTWEntities1 acc = new LTWEntities1();
+        LTWEntities2 acc = new LTWEntities2();
         [HttpGet]
         public ActionResult Register()
         {
@@ -25,18 +25,7 @@ namespace Web_bán_hàng__đồ_án_.Controllers
             {
                 // Kiểm tra nếu Email đã tồn tại trong bảng Customer
                 
-                if (acc.Customers.Any(c => c.CustomerEmail== model.Email))
-                {
-                    ModelState.AddModelError("Emailcus", "Email đã tồn tại.");
-                    return View(model);
-                }
-
-                // Kiểm tra nếu Username đã tồn tại trong bảng User
-                if (acc.Users.Any(u => u.Username == model.UserName))
-                {
-                    ModelState.AddModelError("Username", "Tên đăng nhập đã tồn tại.");
-                    return View(model);
-                }
+                
 
                 // Tạo đối tượng User
                 var user = new User
@@ -64,7 +53,7 @@ namespace Web_bán_hàng__đồ_án_.Controllers
                 acc.SaveChanges();  // Lưu vào bảng Customer
 
                 // Đăng ký thành công, chuyển hướng đến trang đăng nhập
-                return RedirectToAction("Login");
+                return RedirectToAction("Login","Account");
             }
 
             return View(model);

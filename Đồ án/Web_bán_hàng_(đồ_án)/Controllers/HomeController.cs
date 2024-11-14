@@ -9,7 +9,7 @@ namespace Web_bán_hàng__đồ_án_.Controllers
 {
     public class HomeController : Controller
     { 
-        LTWEntities csdl = new LTWEntities();
+        LTWEntities2 csdl = new LTWEntities2();
         public ActionResult trangchu()
         {
 

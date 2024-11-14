@@ -9,11 +9,11 @@ namespace Web_bán_hàng__đồ_án_.Controllers
 {
     public class ProductController : Controller
     {
-        LTWEntities csdl = new LTWEntities();   
+        LTWEntities2 csdl = new LTWEntities2();   
         // GET: Product
         public ActionResult Details(int? id)
         {
-            var product = csdl.Products.FirstOrDefault(i => i.ProductPrice == id);
+            var product = csdl.Products.FirstOrDefault(i => i.CategoryID == id);
             if (product == null)
             {
                 return HttpNotFound();

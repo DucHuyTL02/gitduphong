@@ -166,7 +166,6 @@
     <Compile Include="Models\Product.cs">
       <DependentUpon>CSDL1.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\RegisterModel.cs" />
     <Compile Include="Models\RegisterViewModel.cs" />
     <Compile Include="Models\sysdiagram.cs">
       <DependentUpon>CSDL1.tt</DependentUpon>
