@@ -309,7 +309,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="LTWEntities2" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="LTWEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Categories" EntityType="Self.Category" />
           <EntitySet Name="Customers" EntityType="Self.Customer" />
           <EntitySet Name="Orders" EntityType="Self.Order" />
@@ -343,7 +343,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="LTWModelStoreContainer" CdmEntityContainer="LTWEntities2">
+        <EntityContainerMapping StorageEntityContainer="LTWModelStoreContainer" CdmEntityContainer="LTWEntities">
           <EntitySetMapping Name="Categories">
             <EntityTypeMapping TypeName="LTWModel.Category">
               <MappingFragment StoreEntitySet="Category">

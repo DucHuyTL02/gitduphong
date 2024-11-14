@@ -9,7 +9,7 @@ namespace Web_bán_hàng__đồ_án_.Controllers
 {
     public class ProductController : Controller
     {
-        LTWEntities2 csdl = new LTWEntities2();   
+        LTWEntities csdl = new LTWEntities();   
         // GET: Product
         public ActionResult Details(int? id)
         {

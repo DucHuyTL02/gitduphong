@@ -11,52 +11,69 @@ namespace Web_bán_hàng__đồ_án_.Controllers
     {
 
         // GET: LoginRegister
-        LTWEntities2 acc = new LTWEntities2();
+        LTWEntities acc = new LTWEntities();
         [HttpGet]
         public ActionResult Register()
         {
-            var model = new RegisterModel();
+            var model = new RegisterViewModel();
             return View();
         }
         [HttpPost]
         public ActionResult Register(RegisterViewModel model)
         {
+            var existingUser = acc.Users.FirstOrDefault(u => u.Username == model.UserName);
+            if (existingUser != null)
+            {
+                ModelState.AddModelError("Username", "Username đã được sử dụng. Vui lòng chọn tên khác.");
+            }
+            var existingEmail = acc.Customers.FirstOrDefault(c => c.CustomerEmail == model.Email);
+            if (existingEmail != null)
+            {
+                ModelState.AddModelError("CustomerEmail", "Email đã được sử dụng. Vui lòng chọn email khác.");
+            }
             if (ModelState.IsValid)
             {
-                // Kiểm tra nếu Email đã tồn tại trong bảng Customer
-                
-                
 
-                // Tạo đối tượng User
-                var user = new User
+                try
                 {
-                    Username = model.UserName,
-                    Password = model.Password,  // Lưu mật khẩu chưa mã hóa (tốt nhất là mã hóa mật khẩu trước khi lưu)
-                    UserRole = "Customer"  // Giả sử quyền mặc định là 1
-                };
+                    // Tạo đối tượng User từ dữ liệu của model
+                    var user = new User
+                    {
+                        Username = model.UserName,
+                        Password = model.Password,
+                        UserRole = "Customer"
+                    };
 
-                // Thêm User vào bảng User
-                acc.Users.Add(user);
-                acc.SaveChanges();  // Lưu vào bảng User
+                    // Thêm User vào database
+                    acc.Users.Add(user);
 
-                // Tạo đối tượng Customer
-                var customer = new Customer
+                    // Tạo đối tượng Customer từ dữ liệu của model
+                    var customer = new Customer
+                    {
+                        CustomerName = model.CustomerName,
+                        CustomerPhone = model.CustomerPhone,
+                        CustomerEmail = model.Email,
+                        CustomerAddress = model.CustomerAddress,
+                        Username = model.UserName // Liên kết với User qua khóa ngoại
+                    };
+
+                    // Thêm Customer vào database
+                    acc.Customers.Add(customer);
+
+                    // Lưu thay đổi
+                    acc.SaveChanges();
+                    // Redirect sau khi đăng ký thành công
+                    return RedirectToAction("trangchu", "Home");
+                }
+                catch (Exception ex)
                 {
-                    CustomerName = model.CustomerName,
-                    CustomerPhone = model.CustomerPhone,
-                    CustomerEmail = model.CustomEmail,
-                    Username = model.UserName  // Liên kết với User thông qua Username
-                };
+                    ViewBag.ErrorMessage = "Có Lỗi";
+                    ModelState.AddModelError("", "Error saving data: " + ex.Message);
+                }
 
-                // Thêm Customer vào bảng Customer
-                acc.Customers.Add(customer);
-                acc.SaveChanges();  // Lưu vào bảng Customer
-
-                // Đăng ký thành công, chuyển hướng đến trang đăng nhập
-                return RedirectToAction("Login","Account");
             }
 
-            return View(model);
+                return View(model);
         }
         public ActionResult Login()
         {

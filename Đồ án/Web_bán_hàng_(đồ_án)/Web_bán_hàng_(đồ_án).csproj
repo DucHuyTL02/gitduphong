@@ -137,41 +137,41 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Category.cs">
-      <DependentUpon>CSDL1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\CSDL1.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>CSDL1.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\CSDL1.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>CSDL1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\CSDL1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>CSDL1.edmx</DependentUpon>
+      <DependentUpon>LTW.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Customer.cs">
-      <DependentUpon>CSDL1.tt</DependentUpon>
+      <DependentUpon>LTW.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LTW.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LTW.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LTW.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LTW.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LTW.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LTW.edmx</DependentUpon>
     </Compile>
     <Compile Include="Models\Order.cs">
-      <DependentUpon>CSDL1.tt</DependentUpon>
+      <DependentUpon>LTW.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\OrderDetail.cs">
-      <DependentUpon>CSDL1.tt</DependentUpon>
+      <DependentUpon>LTW.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Product.cs">
-      <DependentUpon>CSDL1.tt</DependentUpon>
+      <DependentUpon>LTW.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\RegisterViewModel.cs" />
     <Compile Include="Models\sysdiagram.cs">
-      <DependentUpon>CSDL1.tt</DependentUpon>
+      <DependentUpon>LTW.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\User.cs">
-      <DependentUpon>CSDL1.tt</DependentUpon>
+      <DependentUpon>LTW.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Watch.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -214,15 +214,15 @@
     <Content Include="Content\Site.css" />
     <Content Include="Images\anh1.jpg" />
     <Content Include="JS\Update.js" />
-    <Content Include="Models\CSDL1.Context.tt">
+    <Content Include="Models\LTW.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>CSDL1.edmx</DependentUpon>
-      <LastGenOutput>CSDL1.Context.cs</LastGenOutput>
+      <DependentUpon>LTW.edmx</DependentUpon>
+      <LastGenOutput>LTW.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="Models\CSDL1.tt">
+    <Content Include="Models\LTW.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>CSDL1.edmx</DependentUpon>
-      <LastGenOutput>CSDL1.cs</LastGenOutput>
+      <DependentUpon>LTW.edmx</DependentUpon>
+      <LastGenOutput>LTW.cs</LastGenOutput>
     </Content>
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
@@ -230,12 +230,12 @@
     <Content Include="Scripts\bootstrap.esm.min.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
-    <EntityDeploy Include="Models\CSDL1.edmx">
+    <EntityDeploy Include="Models\LTW.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>CSDL1.Designer.cs</LastGenOutput>
+      <LastGenOutput>LTW.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <Content Include="Models\CSDL1.edmx.diagram">
-      <DependentUpon>CSDL1.edmx</DependentUpon>
+    <Content Include="Models\LTW.edmx.diagram">
+      <DependentUpon>LTW.edmx</DependentUpon>
     </Content>
     <None Include="Scripts\jquery-3.7.0.intellisense.js" />
     <Content Include="Scripts\jquery-3.7.0.js" />

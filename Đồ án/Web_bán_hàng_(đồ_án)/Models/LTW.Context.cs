@@ -13,10 +13,10 @@ namespace Web_bán_hàng__đồ_án_.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class LTWEntities2 : DbContext
+    public partial class LTWEntities : DbContext
     {
-        public LTWEntities2()
-            : base("name=LTWEntities2")
+        public LTWEntities()
+            : base("name=LTWEntities")
         {
         }
     
