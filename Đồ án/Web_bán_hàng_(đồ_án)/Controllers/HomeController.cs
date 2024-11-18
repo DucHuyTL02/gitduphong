@@ -32,7 +32,7 @@ namespace Web_bán_hàng__đồ_án_.Controllers
         public ActionResult MenWatches()
         {
 
-            return View(csdl.Products.ToList());
+            return View();
         }
         public ActionResult WomenWatches()
         {
@@ -45,6 +45,15 @@ namespace Web_bán_hàng__đồ_án_.Controllers
             return View();
         }
         public ActionResult Banner()
+        {
+            return View();
+        }
+        public ActionResult BannerL()
+        {
+            return View();
+        }
+
+        public ActionResult BannerR()
         {
             return View();
         }

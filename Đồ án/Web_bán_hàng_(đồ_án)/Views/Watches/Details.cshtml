@@ -1,11 +1,10 @@
-﻿<!-- Views/Watches/Details.cshtml -->
+﻿
 @model Web_bán_hàng__đồ_án_.Models.Watch
 
 @{
     ViewBag.Title = "Thông Tin Sản Phẩm";
     Layout = "~/Views/Shared/_LayoutWeb.cshtml";
 }
-
 <!DOCTYPE html>
 <html lang="vi">
 <head>
@@ -24,9 +23,19 @@
             color: #333;
         }
 
+        .product-content {
+            display: flex;
+            margin: 20px 0;
+        }
+
         .product-image {
-            display: block;
-            margin: 20px auto;
+            flex: 1;
+            max-width: 40%;
+        }
+
+        .product-info {
+            flex: 2;
+            padding-left: 20px;
         }
 
         .product-description {
@@ -89,14 +98,18 @@
 <body>
     <div class="container">
         <h1 class="product-title">Tissot Le Locle Powermatic 80</h1>
-        <img src="~/Content/Image/1.jpg" alt="Tissot Le Locle Powermatic 80" class="product-image">
-        <div class="product-description">
-            <p>T006.407.16.033.00 - Nam - Automatic - Mặt Số 39.3mm, Trữ Cốt 80 Giờ, Họa Tiết Guilloche</p>
-            <p>Mã Số Sản Phẩm: T006.407.16.033.00</p>
+        <div class="product-content">
+            <img src="~/Content/Image/1.jpg" alt="Tissot Le Locle Powermatic 80" class="product-image">
+            <div class="product-info">
+                <div class="product-description">
+                    <p>T006.407.16.033.00 - Nam - Automatic - Mặt Số 39.3mm, Trữ Cốt 80 Giờ, Họa Tiết Guilloche</p>
+                    <p>Mã Số Sản Phẩm: T006.407.16.033.00</p>
+                </div>
+                <div class="price">17.500.000 đ</div>
+                <a href="add_to_cart_url" class="add-to-cart">THÊM VÀO GIỎ HÀNG</a>
+                <a href="installment_url" class="installment">Trả Góp Qua Thẻ (Visa, Master, JCB)</a>
+            </div>
         </div>
-        <div class="price">17.500.000 đ</div>
-        <a href="add_to_cart_url" class="add-to-cart">THÊM VÀO GIỎ HÀNG</a>
-        <a href="installment_url" class="installment">Trả Góp Qua Thẻ (Visa, Master, JCB)</a>
 
         <div class="details-container">
             <div class="product-specs">
@@ -119,13 +132,14 @@
             </div>
         </div>
 
+
         <div class="similar-products">
             <h3>Sản Phẩm Tương Tự</h3>
 
 
             <div class="row">
                 <div class="col-md-3">
-                    <a href="@Url.Action("Details", "Home")" style="text-decoration: none;">
+                    <a href="@Url.Action("Details", "Watches")" style="text-decoration: none;">
                         <img src="~/Content/Image/1.jpg" class="img-fluid" alt="Đồng Hồ 1" style="width: 100%; height: auto;" />
                         <h5 style="text-align:center">ROlEX Vàng Nguyên Khối</h5>
                         <p style="text-align:center">Tissot Le Locle Powermatic 80 T006.407.16.033.00 – Nam – Automatic...</p>
@@ -153,9 +167,6 @@
                     </a>
                 </div>
             </div>
-
-
-
         </div>
 
         <div class="reviews">

@@ -216,6 +216,10 @@
     <EmbeddedResource Include="Content\Image\register.jpg" />
     <EmbeddedResource Include="Content\Image\sua.jpg" />
     <EmbeddedResource Include="Content\Image\tissort.jpg" />
+    <EmbeddedResource Include="Content\Image\L.jpg" />
+    <EmbeddedResource Include="Content\Image\R.jpg" />
+    <Content Include="Content\JS\JSSlideBar.js" />
+    <Content Include="Content\mystyle\SlideBar.css" />
     <Content Include="Content\mystyle\StyleLayoutHome.css" />
     <Content Include="Content\mystyle\StyleLogin.css" />
     <Content Include="Content\mystyle\StyleRegister.css" />
