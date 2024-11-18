@@ -27,6 +27,7 @@ namespace Web_bán_hàng__đồ_án_.Models
         public decimal ProductPrice { get; set; }
         public string ProductImage { get; set; }
         public int StockQuantityPro { get; set; }
+        public string BrandPro { get; set; }
     
         public virtual Category Category { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
