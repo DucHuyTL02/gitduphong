@@ -16,8 +16,11 @@ namespace Web_bán_hàng__đồ_án_
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
-            );
+                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional },
+                       namespaces: new[] { "Web_bán_hàng__đồ_án_.Controllers" } // Đặt namespace mặc định
+
+
+                );
 
         }
     }

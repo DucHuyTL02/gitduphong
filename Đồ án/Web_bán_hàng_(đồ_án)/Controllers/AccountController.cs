@@ -64,7 +64,10 @@ namespace Web_bán_hàng__đồ_án_.Controllers
             }
             return View(model);
         }
-        
+        public ActionResult Login()
+        {
+            return View();
+        }
 
     }
 }

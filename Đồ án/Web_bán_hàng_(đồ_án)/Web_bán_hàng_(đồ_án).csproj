@@ -222,7 +222,6 @@
     <EmbeddedResource Include="Content\Image\register.jpg" />
     <EmbeddedResource Include="Content\Image\sua.jpg" />
     <EmbeddedResource Include="Content\Image\tissort.jpg" />
-<<<<<<< HEAD
     <EmbeddedResource Include="Content\Image\L.jpg" />
     <EmbeddedResource Include="Content\Image\R.jpg" />
     <Content Include="Content\JS\JSSlideBar.js" />
@@ -230,14 +229,13 @@
     <Content Include="Content\mystyle\StyleLayoutHome.css" />
     <Content Include="Content\mystyle\StyleLogin.css" />
     <Content Include="Content\mystyle\StyleRegister.css" />
-=======
     <Content Include="Content\StyleAdmin\StyleCategory.css" />
     <Content Include="Content\StyleAdmin\StyleCrudCate.css" />
     <Content Include="Content\StyleAdmin\StyleLayoutAdmin.css" />
+    <Content Include="Content\StyleCustomer\SlideBar.css" />
     <Content Include="Content\StyleCustomer\StyleLayoutHome.css" />
     <Content Include="Content\StyleCustomer\StyleLogin.css" />
     <Content Include="Content\StyleCustomer\StyleRegister.css" />
->>>>>>> 7680fd48c08b0070ea09226d1d6856f2f751eb8c
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />

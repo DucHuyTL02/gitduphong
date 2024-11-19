@@ -48,14 +48,6 @@ namespace Web_bán_hàng__đồ_án_.Controllers
         {
             return View();
         }
-        public ActionResult BannerL()
-        {
-            return View();
-        }
-
-        public ActionResult BannerR()
-        {
-            return View();
-        }
+ 
     }
 }
